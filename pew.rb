@@ -5,26 +5,26 @@ class Pew < Formula
   
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/yuann3/pew/releases/download/v0.1.0/pew_0.1.0_darwin_arm64.tar.gz"
-      sha256 "f136873687dbdca9a0433367065a342ce04de8153799dc8c51e4c34b172ddf2d" 
+      url "https://github.com/yuann3/pew/releases/download/v0.1.1/pew_0.1.1_darwin_arm64.tar.gz"
+      sha256 "2724698d7700f97556fa5a98d0a974aa2da48080e6d2f2010c04bcaa825d8896" 
     else
-      url "https://github.com/yuann3/pew/releases/download/v0.1.0/pew_0.1.0_darwin_amd64.tar.gz"
-      sha256 "f1bc987a9e148a5f6dd3f44aa5b4b2bc8754fd8da0b12ed69d27d8106d7deedd"
+      url "https://github.com/yuann3/pew/releases/download/v0.1.1/pew_0.1.1_darwin_amd64.tar.gz"
+      sha256 "f810cf0bb9d27621095fe11d708ae941c8e55bdac1eab547058ba5b2f259bf08"
     end
   end
   
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/yuann3/pew/releases/download/v0.1.0/pew_0.1.0_linux_arm64.tar.gz"
-      sha256 "f2ed8b262eceb64704a1bfefd1166bcb921cfa38be20421a32e4d3becf8243f1"
+      url "https://github.com/yuann3/pew/releases/download/v0.1.1/pew_0.1.1_linux_arm64.tar.gz"
+      sha256 "8d5814cbb94e37a1e6a0cd89ef4c9a3825e2b43a1f3baea52ddca8f4f0266c9f"
     else
-      url "https://github.com/yuann3/pew/releases/download/v0.1.0/pew_0.1.0_linux_amd64.tar.gz"
-      sha256 "02cdf993c9b7bd00aa8b581c54caac2cba092aa9285831d49db73e98becdfe6e"
+      url "https://github.com/yuann3/pew/releases/download/v0.1.1/pew_0.1.1_linux_amd64.tar.gz"
+      sha256 "2e935ba3ece418183f11941d688e090d783b188f88a9059bf11ff872e6518380"
     end
   end
   
   def install
-    bin.install "pew_0.1.0_#{OS.mac? ? 'darwin' : 'linux'}_#{Hardware::CPU.arm? ? 'arm64' : 'amd64'}" => "pew"
+    bin.install "pew_0.1.1_#{OS.mac? ? 'darwin' : 'linux'}_#{Hardware::CPU.arm? ? 'arm64' : 'amd64'}" => "pew"
   end
 
   test do
